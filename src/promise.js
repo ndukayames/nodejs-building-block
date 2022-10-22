@@ -1,8 +1,12 @@
+// eslint-disable-next-line no-unused-vars
 const myPromise = new Promise((resolve, reject) => {
-  setTimeout(resolve, 100, "Resolved");
-  setTimeout(reject, 100, "Reject");
+  resolve(234);
 });
 
-myPromise
-  .then((result) => console.log(result))
-  .catch((err) => console.log(1, err));
+const myPromise2 = new Promise((resolve, reject) => {
+  reject(123);
+});
+
+const prom = Promise.all([myPromise, myPromise2]);
+
+console.log(prom);
