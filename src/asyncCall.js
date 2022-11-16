@@ -1,3 +1,3 @@
-fetch("https://jsonplaceholder.typicode.com/users").then((res) =>
-  console.log(res.json())
-);
+global
+  .fetch("https://www.wikipedia.org")
+  .then((res) => console.log(res.json()));
